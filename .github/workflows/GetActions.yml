@@ -23,5 +23,5 @@ jobs:
         run: cd client && npm run build
       - name: lint code client
         run: cd client && npm run lint:fix
-      - name: build back
-        run: cd server && npm run build
+      - name: check types back
+        run: cd server && npm run types
