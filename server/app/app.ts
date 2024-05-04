@@ -3,6 +3,8 @@ import cors from 'cors'
 import dotenv from 'dotenv'
 import mongoose from 'mongoose'
 
+import { globalRouter } from './routes/global.routes.ts'
+
 dotenv.config()
 
 const app = express()
@@ -11,6 +13,7 @@ const dbUrl = process.env.DB_URL ?? ''
 
 app.use(cors({ origin: process.env.CLIENT_URL }))
 app.use(express.json())
+app.use('/api', globalRouter)
 
 async function bootstrap() {
   try {
