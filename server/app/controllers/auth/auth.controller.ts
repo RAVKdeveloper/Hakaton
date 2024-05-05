@@ -1,17 +1,31 @@
 import type { Request, Response } from 'express'
 
+import { validationResult } from 'express-validator'
+
 import { ApiError } from '../../errorHandling/apiError.ts'
 
 import { AuthService } from '../../services/index.ts'
 
 class AuthController {
-  public async login(req: Request, res: Response) {
+  public async registration(req: Request, res: Response) {
     try {
-      await AuthService.login()
+      const dto = validationResult(req)
 
-      res.send({ message: 'Happy hacking' })
+      if (!dto.isEmpty()) {
+        return new ApiError().BAD_REQUEST({ res, str: dto.array() })
+      }
+
+      const data = await AuthService.registr(req.body, res)
+
+      if (!data) return new ApiError().SERVER_INTERNAL({ res })
+
+      res.cookie('access-token_hakaton', data.token, {
+        httpOnly: true,
+      })
+
+      return res.send(data.user)
     } catch {
-      throw new ApiError().SERVER_INTERNAL({ res })
+      return new ApiError().SERVER_INTERNAL({ res })
     }
   }
 }

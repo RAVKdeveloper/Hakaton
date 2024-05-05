@@ -1,6 +1,7 @@
 import express from 'express'
 import cors from 'cors'
 import dotenv from 'dotenv'
+import cookieParser from 'cookie-parser'
 import mongoose from 'mongoose'
 
 import { globalRouter } from './routes/global.routes.ts'
@@ -13,6 +14,7 @@ const dbUrl = process.env.DB_URL ?? ''
 
 app.use(cors({ origin: process.env.CLIENT_URL }))
 app.use(express.json())
+app.use(cookieParser())
 app.use('/api', globalRouter)
 
 async function bootstrap() {
