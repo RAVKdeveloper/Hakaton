@@ -24,6 +24,6 @@ jobs:
       - name: lint code client
         run: cd client && npm run lint:fix
       - name: install modules server
-        run: cd server && npm ci
-      - name: check types back
-        run: cd server && npm run types
+        run: cd newServer && npm ci
+      - name: check newServer build
+        run: cd newServer && npm run build
