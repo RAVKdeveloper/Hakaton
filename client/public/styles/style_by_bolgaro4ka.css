@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'unbounded';
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 15px;
+}
+
+input {
+    padding: 10px;
+    width: 300px;
+    border: none;
+    
+}
+
+input:focus {
+    border: none;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background-color: yellow;
+    cursor: pointer;
+}
+
+form {
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+#results {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 500px;
+}
+
+.card {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #5c5c5c;
+    color: white;
+}
+
+h4 {
+    font-weight: 400;
+}
