@@ -1,3 +1,22 @@
+# Start client
+
+```
+cd client && npm run dev
+```
+
+# Start server with Docker(Express)
+
+```
+docker compose up -d --build
+```
+cd server && npm run dev
+```
+# Start new server
+```
+cd newServer && npm run start:dev
+```
+
+# Description
 # Название проекта
 МегаПоиск
 
@@ -15,30 +34,11 @@
 Перечислите технологии, которые использовались в проекте.
 
 1. TypeScript
-2. Express.js
-3. PostgreSQL
-4. Frontend (Next js)
-
-## Установка
-
-```bash
-git clone https://github.com/ваш-проект
-cd ваш-проект
-npm install
-```
-
-## сборка проекта
-
-Для сборки проекта используем команды
-
-```bash
-npm run dev
-```
-
-или
-
-```bash
-npm run start
+2. Next
+3. Express.js
+4. PostgreSQL
+5. JWT
+6. Nest
 ```
 ##Участники
 -Тимофей Котегов
