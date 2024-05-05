@@ -8,7 +8,6 @@ cd client && npm run dev
 
 ```
 docker compose up -d --build
-```
 cd server && npm run dev
 ```
 # Start new server
@@ -40,7 +39,7 @@ cd newServer && npm run start:dev
 5. JWT
 6. Nest
 ```
-##Участники
+# Участники
 -Тимофей Котегов
 -Никита Федотов
 -Максим Федотов
