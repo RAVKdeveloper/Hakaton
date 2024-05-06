@@ -1,17 +1,7 @@
-# Внимание
-Старый бэкенд лежит в папочке server
-
 # Start client
 
 ```
 cd client && npm run dev
-```
-
-# Start server with Docker(Express)
-
-```
-docker compose up -d --build
-cd server && npm run dev
 ```
 # Start new server
 ```
