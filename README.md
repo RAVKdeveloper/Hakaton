@@ -3,7 +3,12 @@
 ```
 cd client && npm run dev
 ```
-# Start new server
+# Start Server with Docker
+```
+cd newServer && docker compose up -d --build
+```
+
+# Start server
 ```
 cd newServer && npm run start:dev
 ```
