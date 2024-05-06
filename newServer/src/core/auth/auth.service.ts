@@ -67,7 +67,7 @@ export class AuthService {
   }
 
   public async me(id: number) {
-    const { password, ...user } = await this.userRepo.findOne({
+    const user = await this.userRepo.findOne({
       where: { id },
     })
 
